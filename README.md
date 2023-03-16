@@ -38,3 +38,11 @@ print(result)
   'text': 'The lady soon appeared, presenting a most charming spectacle of perfect beauty, set off by the most appropriate adornments.'
  }
 ```
+
+Health checking:
+```
+$ !curl http://127.0.0.1:5100/healthcheck
+```
+``` bash
+pong
+```
