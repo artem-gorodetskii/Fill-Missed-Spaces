@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Fill Missed Spaces</title>
+
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+<body>
+ <div class="login">
+	<h1>Fill Missed Spaces</h1>
+
+    <!-- Make request -->
+    <form action="{{ url_for('predict.predict_homepage')}}"method="post">
+    	 
+        <textarea rows="10" cols="80" type="text" name="text" 
+                  placeholder="Type your text here and push the submit button." required="required" 
+                  style="resize:none" ></textarea>
+        </textarea>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Submit
+        </button>
+    </form>
+
+   <br>
+   <br>
+
+   <!-- Show result -->
+   <textarea rows="14" cols="80" type="text" name="text2" 
+             placeholder="The reconstructed text will appear in this field." required="required" 
+             style="resize:none" >{{message}}</textarea>
+
+ </div>
+</body>
+</html>
