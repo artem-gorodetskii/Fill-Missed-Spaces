@@ -22,7 +22,7 @@ $ docker run -it -p 5100:5100 -d fill-missed-spaces
 ```
 
 ### Usage
-Request example:
+** Request example **
 ``` python
 import requests
 
@@ -39,10 +39,20 @@ print(result)
  }
 ```
 
-Health checking:
+** Health checking **
 ```
 $ !curl http://127.0.0.1:5100/healthcheck
 ```
-``` bash
-pong
+
+** Application interface **
+To access the application visit the following URL:
 ```
+http://127.0.0.1:5100/
+```
+You will see the following interface with text fields and submit button.
+
+<p align="center">
+  <img alt="img-name" src="assets/homepage_screen_shot.png" width="800">
+  <br>
+    <em>Fig. 1. Application home page.</em>
+</p>
