@@ -1,5 +1,7 @@
 # Fill-Missed-Spaces
-HTTP-service that receives text with missed spaces and returns a corrected sentence and a list of missed spaces positions.
+HTTP-service that receives text with missed spaces and returns a corrected sentence and a list of missed spaces positions. 
+
+The [algorithm](https://github.com/artem-gorodetskii/Fill-Missed-Spaces/blob/main/model/space_predictor.py#L6) reconstructs the string using its tokenized representation. The [tokenization algorithm](https://github.com/artem-gorodetskii/Fill-Missed-Spaces/blob/main/model/tokenizer.py#L7) is based on dynamic programming and probabilistic modeling of unigrams with a predefined vocabulary.
 
 ### Installation
 Clone the repository:
