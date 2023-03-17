@@ -1,7 +1,7 @@
 # Fill-Missed-Spaces
 HTTP-service that receives text with missed spaces and returns a corrected sentence and a list of missed spaces positions. 
 
-The algorithm reconstructs the string using its tokenized representation. The tokenization algorithm is based on dynamic programming and probabilistic modeling of unigrams with a predefined vocabulary.
+The algorithm reconstructs the string using its tokenized representation. The tokenization algorithm is based on dynamic programming and probabilistic unigram model with a predefined vocabulary.
 
 ### Installation
 Clone the repository:
@@ -57,7 +57,7 @@ To access the application visit the following URL:
 ```
 http://127.0.0.1:5100/
 ```
-You will see an interface with text fields and a submit button. Type your text in the top text field and click Submit. The service response will then appear in the bottom text box. See the video in the figure below.
+You will see an interface with text fields and a submit button. Type your text in the top text field and click Submit. The service response will then appear in the bottom text box. You can see an example in the figure below.
 
 <p align="center">
   <img alt="img-name" src="assets/homepage_screen_recording.gif" width="800">
