@@ -48,7 +48,7 @@ print(result)
 
 To ping the service, you can use curl as follows:
 ```
-$ !curl http://127.0.0.1:5100/healthcheck
+$ curl http://127.0.0.1:5100/healthcheck
 ```
 
 **Application interface**
