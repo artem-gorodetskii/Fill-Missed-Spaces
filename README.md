@@ -43,6 +43,7 @@ print(result)
   'text': 'The lady soon appeared, presenting a most charming spectacle of perfect beauty, set off by the most appropriate adornments.'
  }
 ```
+If the text length exceeds 512 characters, the service raises the REQUEST_ENTITY_TOO_LARGE error.
 
 **Checking the health**
 
