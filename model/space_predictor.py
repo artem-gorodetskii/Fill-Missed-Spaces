@@ -77,8 +77,7 @@ class SpacePredictor(object):
         reconstructed_s, missed_spaces = self.__reconstruct(s, tokens)
 
         result = {'text': reconstructed_s,
-                  'missed_spaces': missed_spaces
-                  }
+                  'missed_spaces': missed_spaces}
         
         return result
     
