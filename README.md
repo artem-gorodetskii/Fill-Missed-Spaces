@@ -45,6 +45,7 @@ print(result)
 ```
 
 **Checking the health**
+
 To ping the service, you can use curl as follows:
 ```
 $ !curl http://127.0.0.1:5100/healthcheck
@@ -56,10 +57,9 @@ To access the application visit the following URL:
 ```
 http://127.0.0.1:5100/
 ```
-You will see an interface with text fields and a submit button. Type your text in the top text field and click Submit. The service response will then appear in the bottom text box. See the animation in the figure below.
+You will see an interface with text fields and a submit button. Type your text in the top text field and click Submit. The service response will then appear in the bottom text box. See the video in the figure below.
 
 <p align="center">
   <img alt="img-name" src="assets/homepage_screen_recording.gif" width="800">
   <br>
-    <em>Fig. 1. Application home page.</em>
 </p>
