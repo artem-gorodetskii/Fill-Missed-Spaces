@@ -1,5 +1,5 @@
 # Fill-Missed-Spaces
-HTTP-service that receives text with missed spaces and returns a corrected sentence and a list of missed spaces positions. 
+HTTP service that receives text with missed spaces and returns a corrected sentence and a list of missed spaces positions. 
 
 The algorithm reconstructs the string using its tokenized representation. The tokenization algorithm is based on dynamic programming and probabilistic unigram model with a predefined vocabulary.
 
