@@ -22,28 +22,41 @@ def predict_spaces():
         and returns a json with reconstructed string and indexes 
         of missed spaces.
     """
-    json_request = request.get_json(force=True)
-    
-    s = json_request['text']
+    # limit request length
+    if request.content_length <= app_config['CONTENT_LEN']:
 
-    result = model.predict(s)
+        json_request = request.get_json(force=True)
+        s = json_request['text']
+        result = model.predict(s)
+
+        return jsonify(result)
     
-    return jsonify(result)
+    else:
+        return jsonify(message = "The request is too large."), 413
 
 
 @routes.route('/predict_homepage', methods=['POST'])
 def predict_homepage():
     r"""Updates the homepage after the user submits a string.
     """
-    s = request.form['text']
+    # limit request length
+    if request.content_length <= app_config['CONTENT_LEN']:
 
-    predictions = model.predict(s)
+        s = request.form['text']
+        predictions = model.predict(s)
 
-    # Prepare message with predictions
-    predicted_text = predictions['text']
-    space_indices = [str(index) for index in predictions['missed_spaces']]
-    space_indices = ', '.join(space_indices)
+        # Prepare message with predictions
+        predicted_text = predictions['text']
+        space_indices = [str(index) for index in predictions['missed_spaces']]
+        space_indices = ', '.join(space_indices)
 
-    message = "Reconstructed text: \n{}\n\nMissed spaces positions: \n{}".format(predicted_text, space_indices)
+        message = "Corrected text: \n{}\n\nMissed spaces positions: \n{}".format(predicted_text, space_indices)
+        
+        return render_template('home.html', message = message)
     
-    return render_template('home.html', message = message)
+    else:
+        # Error message
+        message = "The text length exceeds the allowed character limit."
+
+        return render_template('home.html', message = message)
+    

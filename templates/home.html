@@ -18,8 +18,8 @@
     <!-- Make request -->
     <form action="{{ url_for('predict.predict_homepage')}}"method="post">
     	 
-        <textarea rows="10" cols="80" type="text" name="text" 
-                  placeholder="Type your text here and push the submit button." required="required" 
+        <textarea rows="10" cols="86" type="text" name="text" 
+                  placeholder="Type your text here and push the submit button. The text must not exceed 512 characters." required="required" 
                   style="resize:none" ></textarea>
         </textarea>
 
@@ -31,8 +31,8 @@
    <br>
 
    <!-- Show result -->
-   <textarea rows="14" cols="80" type="text" name="text2" 
-             placeholder="The reconstructed text will appear in this field." required="required" 
+   <textarea rows="14" cols="86" type="text" name="text2" 
+             placeholder="The corrected text will appear in this field." required="required" 
              style="resize:none" >{{message}}</textarea>
 
  </div>

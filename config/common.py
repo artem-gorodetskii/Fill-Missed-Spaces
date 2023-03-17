@@ -17,4 +17,8 @@ app_config = {
     # Model config
     'VOCABULARY_PATH': "static/vocabulary/vocabulary_126k.txt.gz",
     'PUNCTUATION': {'.', ',', ':', ';', '!', '?'},   
+
+    # Allowed request length
+    # max text length + len({'text': ''})
+    'CONTENT_LEN': 512 + 12 
 }
